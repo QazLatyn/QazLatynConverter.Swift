@@ -125,7 +125,11 @@ public class QazLatynHelper
             case "ж": latynStrs[i] = "j"
             case "Ң": latynStrs[i] = "Ń"
             case "ң": latynStrs[i] = "ń"
-            case "ь": latynStrs[i] = ""
+            case 'ь': { latynStrs[i] = ""; } break;
+            case 'Ь': { latynStrs[i] = ""; } break;
+            case 'ъ': { latynStrs[i] = ""; } break;
+            case 'Ъ': { latynStrs[i] = ""; } break;
+            case '¬': { latynStrs[i] = ""; } break;
             default: latynStrs[i] = String(chars[i])
             }
         }
